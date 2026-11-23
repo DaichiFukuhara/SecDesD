@@ -1,18 +1,22 @@
-Main-point
+# Main-point
 Path-traversal is an attack to change the path.
 
-Example
+# Example
 loadImage?image=picture.png
 This endpoint means GET method.
 GET https://__sample__.net/picture.png
 The attackers change this to https://__sample__.net/../../../etc/passwd.
 Then, the password file is displayed on attacker's screen.
 
-Interpretation
+# Interpretation
 I think this is legacy attack way, so most of websites　take measures.
 Because it is easy to do it.
 For example, encrypting the sentences before access the point.
 Or, don't give the access　authority for user. I don't know how to do this.
+
+# Solution
+"loadImage?image="picutre.png" →  ”loadImage?image="../../../etc/passwd"
+Directly entering in URL is uncorrect, because "../" is deleted by browse's system.
 
 ---
 
